@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Background Changer</title>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+		body{
+			background-color:white;
+		}
+		h1{
+			font-family: 'Baloo Tamma 2', cursive;
+			font-size: 40px;
+			background-color: #008CBA;
+			padding: 10px;
+			border-radius: 20px;
+			color: white;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		 }
+		 button:hover{
+		 	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		 	  background-color: skyblue;
+		 }
+		div{
+			margin: auto;
+			width: 500px;
+			height: 500px;
+			text-align: center;
+		}
+		button {
+			background-color: #008CBA;
+ 			border: none;
+  			color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 16px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+  			border-radius: 10px;
+
+		}
+
+	</style>
+</head>
+<body id="body">
+	<div>
+	<h1 id='h1'>HEX COLOR:</h1>
+	<button id="btn" onclick="randomColor()">Change Color</button>
+	</div>
+</body>
+<script type="text/javascript">
+	button = document.getElementById("btn");
+	function randomColor(){
+		colors = ["#155C65","#F8F0D2","#BEBC85","#965651","#79333B","#C35B38","#D7D550","#3FC8C9","#F4F0E1","#0ADD","#061919"];
+		chColor = colors[Math.floor((Math.random() * colors.length) + 0)];
+		document.body.style.backgroundColor = chColor;
+		document.getElementById('h1').innerHTML = chColor;
+	}
+</script>
+</html>
